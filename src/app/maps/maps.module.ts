@@ -10,6 +10,9 @@ import { MapScreenComponent } from './screens/map-screen/map-screen.component';
   ],
   imports: [
     CommonModule
+  ],
+  exports: [
+    MapScreenComponent
   ]
 })
 export class MapsModule { }
