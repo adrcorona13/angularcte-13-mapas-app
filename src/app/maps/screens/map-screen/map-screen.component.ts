@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { PlacesService } from '../../services';
+
 
 @Component({
   selector: 'app-map-screen',
@@ -7,4 +9,5 @@ import { Component } from '@angular/core';
 })
 export class MapScreenComponent {
 
+  constructor(private placesService: PlacesService) { }
 }
