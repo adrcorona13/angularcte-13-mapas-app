@@ -39,5 +39,7 @@ export class SearchResultsComponent {
     const end = place.center as [number, number];
     
     this.mapService.getRouteBetweenTwoPoints(start, end);
+
+    this.placesService.deletePlaces();
   }
 }
