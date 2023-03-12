@@ -2,8 +2,9 @@ import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
 
 import mapboxgl from 'mapbox-gl'; // or "const mapboxgl = require('mapbox-gl');"
+import { env } from './environments/environment';
 
-mapboxgl.accessToken = 'pk.eyJ1IjoiYWRyY29yb25hMTMiLCJhIjoiY2xlbDFodXFnMDZ2aDN3bWp3aDQwMDgzZCJ9.acvpRtp4CJNVIabIUyC9PA';
+mapboxgl.accessToken = env.apiKey;
 
 if (!navigator.geolocation) {
   const msg = 'Geolocation is not available';
