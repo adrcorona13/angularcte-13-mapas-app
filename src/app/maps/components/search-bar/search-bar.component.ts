@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class SearchBarComponent {
 
+  private debounceTimer?: NodeJS.Timeout;
+
+  onQueryChanged(query: string){
+    if (this.debounceTimer) {
+      clearTimeout(this.debounceTimer);
+    }
+    this.debounceTimer = setTimeout(() => {
+      console.log('mandar query', query);
+      
+    }, 350);
+  }
 }
